@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">desafio-tokenlab</string>
+    <string name="nome_default">Nome não encontrado</string>
+</resources>
