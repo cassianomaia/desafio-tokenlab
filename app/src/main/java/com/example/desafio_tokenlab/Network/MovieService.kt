@@ -6,6 +6,6 @@ import retrofit2.Call
 
 interface MovieService {
 
-    @GET("movies/")
+    @GET("movies")
     fun getMovies(): Call<MovieList>
 }
