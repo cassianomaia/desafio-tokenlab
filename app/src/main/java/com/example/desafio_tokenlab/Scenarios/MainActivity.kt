@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     override fun showLoading() {
+        Toast.makeText(this,"Baixando informações :D", Toast.LENGTH_SHORT).show()
         pbLoading.visibility = ProgressBar.VISIBLE
     }
 }

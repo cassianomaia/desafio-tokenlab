@@ -8,6 +8,6 @@ class RetrofitInitializer {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun createMovieSerice() = retrofit.create(MovieService::class.java)
+    fun createMovieService() = retrofit.create(MovieService::class.java)
 
 }

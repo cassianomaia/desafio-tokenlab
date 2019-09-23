@@ -12,14 +12,14 @@ class MainPresenter(val view: MainContract.View) : MainContract.Presenter {
 
         view.showLoading()
 
-        val movieService = RetrofitInitializer().createMovieSerice()
+        val movieService = RetrofitInitializer().createMovieService()
 
         val call = movieService.getMovies()
 
         call.enqueue(object: Callback<MovieList> {
             override fun onFailure(call: Call<MovieList>, t: Throwable) {
                 view.hideLoading()
-                view.showMessage("Falha na conexão. Você está sem internet D:")
+                view.showMessage(t.toString())
             }
 
             override fun onResponse(call: Call<MovieList>, response: Response<MovieList>) {
